@@ -1,7 +1,4 @@
 
-/*podria empezar con k = mitad,acomodo las vacas y me fijo si me sobra mucho espacio
-si me sobra,k+1,sino,retorno k= k-1*/
-//la distancia minima más larga no es el mayor k que encuentre,sino,recorriendo el arreglo ver cual es el minimo
 #include <iostream>
 #include <vector>
 #include <algorithm>
@@ -42,7 +39,7 @@ int asignarVacas(vector<int>& s,int vacas,int inicio,int final) {
    
    while(inicio<= final) {
         int k = redondearEnteros(inicio+final) ;
-        if(asignarVacasConK(s,vacas,k)) { //es como un algoritmo de bsuqeda binaria pero estamos buscando el k mas grande 
+        if(asignarVacasConK(s,vacas,k)) { //busqueda binaria del k mas grande
         inicio = k+1; 
         if(k>mejorKHastaAhora) {
             mejorKHastaAhora = k ;
@@ -54,7 +51,7 @@ int asignarVacas(vector<int>& s,int vacas,int inicio,int final) {
         final = k-1 ; //me pase y ese k no funciona
   
     }}
-    return mejorKHastaAhora ; //no puedo retornar final,a veces funciona pero no siempre
+    return mejorKHastaAhora ; 
 
 
 }
