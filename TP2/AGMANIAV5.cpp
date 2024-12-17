@@ -101,7 +101,7 @@ bool esPuente(DisjointSET& grafo,tuple<long long int,long long int>& arista) {
     return (grafo.findSet(get<0>(arista))!= grafo.findSet(get<1>(arista)));
 } 
 
-//Funcion de ordenamiento : es igual a la que usé para la solucion de ImVeryBusy del TP1 pero utilizando otro criterio.
+
 //Voy a ordenar de menor a mayor por PESO,es decir,la tercer componente de la tupla.
 //La complejidad es O(log |E| * |E|)
 
