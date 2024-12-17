@@ -9,19 +9,6 @@
 using namespace std ;
 
 
-/*tuple<int,int,int> minimo(vector<tuple<int,int,int>>& s) {
-    int contador = 99999999 ;
-    tuple<int,int,int> tuplaMinima ;
-    for(size_t j = 0 ; j< s.size() ; j++) {
-        if(get<0>(s[j])<contador) {
-            contador = get<0>(s[j]) ;
-            tuplaMinima = s[j] ;
-        }
-    }
-    return tuplaMinima ;
-}
-
-*/
 
 
 bool comparacionPorFinalizacion(tuple<int,int>& a ,tuple<int,int>& b) {
@@ -96,7 +83,7 @@ int main() {
             actividades.push_back(tarea) ;
         } 
         std::vector<std::tuple<int,int>> actividadesYaOrdenadas ;
-        std::vector<std::tuple<int,int>> agenda;  //no se reiniciaba el vector,quedaban las act viejas en los otrso casos de test
+        std::vector<std::tuple<int,int>> agenda; 
         vector<tuple<int,int>> agendaOrganizada ;
         int res ;
         actividadesYaOrdenadas = ordenarActividadesSort(actividades) ;
@@ -107,13 +94,7 @@ int main() {
 
          }  
          return 0; 
-     
-     /*
-        vector<tuple<int,int>> orga = ordenarActividadesSort(ordenador) ;
-        vector<tuple<int,int>> agendaa ;
-        vector<tuple<int,int>> agend = imVeryBusy(orga,0,agendaa);
-        int res = (int) agend.size() ;
-        std::cout << res << std::endl ; */
+
 
 
 }
