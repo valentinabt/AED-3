@@ -55,7 +55,7 @@ long long int aulas;
 long long int atajos;
 unordered_map<long long int,unordered_map<long long int,long long int>> caminos;
 
-//unordered map es un diccionario.Utilice esta estructura porque sino no puedo indexar sobre los vertices,necesito un indice.
+
 cin >> aulas;
 atajos = aulas ;
 long long int i = 1 ;
@@ -69,7 +69,7 @@ while(i<=atajos) {
       
     }
  
- //antes pasaba los caminos por copia,y no se modificaban ! prestar atención a eso.
+
  for(const pair<long long int,unordered_map<long long int,long long int>>&  aula : caminos) {
      if(aula.first ==1) {
         caminos[aula.first][aula.first+1] = 1 ; //la distancia desde un aula al aula contigua
