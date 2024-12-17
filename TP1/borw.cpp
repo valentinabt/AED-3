@@ -17,7 +17,7 @@ int borw(vector<int>& s,vector<vector<vector<int>>>& memoria,size_t i,size_t ult
     int blanco = INT_MAX;
     int negro = INT_MAX ;
     int noPinto = INT_MAX ;
-    if(i== s.size()) { //en vez de cambiar la memoria pongo en una variable y desp en memoria,quizas es eso.
+    if(i== s.size()) { 
         return 0;
     } 
   
@@ -38,7 +38,7 @@ int borw(vector<int>& s,vector<vector<vector<int>>>& memoria,size_t i,size_t ult
             negro = borw(s,memoria,i+1,ultB,i+1) ; //pinto de negro
     
         }
-        noPinto = 1 + borw(s,memoria,i+1,ultB,ultN) ; //este antes en cada if
+        noPinto = 1 + borw(s,memoria,i+1,ultB,ultN) ; 
         res = minimo(minimo(blanco,negro),noPinto) ;
         memoria[i][ultB][ultN] = res;
    
@@ -49,7 +49,7 @@ int borw(vector<int>& s,vector<vector<vector<int>>>& memoria,size_t i,size_t ult
 
 int pintar(vector<int>& s) {
    vector<vector<vector<int>>> memoria(s.size(),vector<vector<int>>(s.size()+1,vector<int>(s.size()+1, 0)));
-  //complejdiad espacial O(n*n*n) es una prueba
+  //complejdiad espacial O(n*n*n)
   for(size_t i = 0;i< memoria.size();i++) {  
     for(size_t j= 0 ; j < memoria[i].size() ; j++) {
         for(size_t k = 0 ; k < memoria[i][j].size() ;k++) {
