@@ -49,7 +49,7 @@ int main() {
 long long int nodosDelArbol; 
 long long int contador;
 unordered_map<long long int,vector<long long int>> aristas ;
-//unordered map es un diccionario.Utilice esta estructura porque sino no puedo indexar sobre los vertices,necesito un indice.
+
 
 cin >> nodosDelArbol; 
 contador = nodosDelArbol ;
@@ -84,12 +84,3 @@ while(contador-1 >0) {
     return 0;
      
 }
-//caso de falla : 10,20,30,40,50,60,70,80,90,100,110.Si las aristas eran :
-/* 10 20,10 30,20 40,20 50,30 60,30 70,50 80,60 90,70 100 y 70 110 depende del orden en que las pusiera pintaba del mismo color una arista completa
-o reasignaba colores,entonces o tenia conjuntos que tenian elementos iguales,o bien habia una arista que tenia elementos del mismo conjunto.
-
-
-
-
-
-*/
